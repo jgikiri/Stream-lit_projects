@@ -3,8 +3,15 @@ import pickle
 import streamlit as st
 import os
 
-# Loading the save model
-model_path= r"D:\Desktop\New School ML\model.sav"
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the relative path to the model file
+model_path = os.path.join(script_dir, "model.sav")
+
+
+# Load the model
 loaded_model = pickle.load(open(model_path, "rb"))
 
 # Creating a function for prediction
