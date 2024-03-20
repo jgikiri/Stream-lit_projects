@@ -4,7 +4,7 @@ import streamlit as st
 import os
 
 # Loading the save model
-model_path = os.path.join("D:", os.sep, "Desktop", "New School ML", "model.sav")
+model_path= r"D:\Desktop\New School ML\model.sav"
 loaded_model = pickle.load(open(model_path, "rb"))
 
 # Creating a function for prediction
